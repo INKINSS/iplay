@@ -45,3 +45,15 @@ import MainHeader from "../components/mainHeader/MainHeader.astro";
         grid-template-rows: auto 1fr auto;   
     }
 </style>
+<style is:global>
+    @font-face {
+        font-family: 'circularSTD';
+        src: url('/public/font/CircularSpotifyText-Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    html {
+        font-family: 'circularSTD', sans-serif;
+        letter-spacing: .05em;
+    }
+</style>
