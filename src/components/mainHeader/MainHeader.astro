@@ -1,0 +1,42 @@
+---
+import SpotifyIcon from '../../icons/Spotify.astro';
+import HomeIcon from '../../icons/Home.astro';
+import SearchIcon from '../../icons/Search.astro';
+import ExploreIcon from '../../icons/Explore.astro';
+import DownloadIcon from '../../icons/Download.astro';
+import NotificationIcon from '../../icons/Notification.astro';
+import UsersIcon from '../../icons/Users.astro';
+import Profile from '../../assets/img/Profile.astro';
+---
+
+<header class="flex items-center justify-between">
+    <div class="flex items-center gap-5 flex-1">
+        <SpotifyIcon />
+        <div class="flex items-center gap-3 flex-1">
+            <figure class="p-3 bg-zinc-800 rounded-full hover:scale-105 transition-all">
+                <HomeIcon />
+            </figure>
+            <div class="flex gap-2 items-center bg-zinc-800 px-4 py-2 rounded-full w-[55%] min-w-[350px]">
+                <SearchIcon />
+                <input class="text-zinc-300 font-semibold border-r-2 border-zinc-700 w-full focus-visible:outline-none" type="text" placeholder="¿Qué quieres reproducir?" />
+                <ExploreIcon />
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center gap-5">
+        <div class="flex items-center">
+            <button class="bg-white text-[.7rem] text-black font-bold rounded-full px-4 py-2 hover:scale-105 transition-all">Descrubrir Premium</button>
+            <button class="flex items-center gap-2 bg-transparent text-[.7rem] text-zinc-300 font-bold rounded-full px-4 py-2 hover:scale-105">
+                <DownloadIcon />
+                Instalar app
+            </button>
+        </div>
+        <div class="flex items-center gap-6">
+            <NotificationIcon />
+            <UsersIcon />
+            <figure class="p-2 bg-zinc-800 rounded-full">
+                <Profile />
+            </figure>
+        </div>
+    </div>
+</header>
