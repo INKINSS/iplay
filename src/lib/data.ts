@@ -4,7 +4,7 @@ export interface Playlist {
   id: string;
   albumId?: number;
   title: string;
-  color: (typeof colors)[keyof typeof colors];
+  color?: (typeof colors)[keyof typeof colors];
   cover?: string;
   artists?: string[];
 }
@@ -68,27 +68,22 @@ export const playlists: Playlist[] = [
 
 export const favoriteHeader: Playlist[] = [
     {
-        id: '1',
-        title: "Canciones que te gustan",
-        color: colors.yellow,
-    },
-    {
         id: '2',
-        title: "¿El mayor desafio de un programador?",
+        title: "El futuro de la programación",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/midudev/cover_midudev.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9taWR1ZGV2L2NvdmVyX21pZHVkZXYuanBnIiwiaWF0IjoxNzU2MTM3ODM4LCJleHAiOjIwNzE0OTc4Mzh9.ntOyk4iV-uttegtj1E1DAkIGxnAfzHXFxWepABxgusE"
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/hola%20mundo/cover_holamundo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9ob2xhIG11bmRvL2NvdmVyX2hvbGFtdW5kby5wbmciLCJpYXQiOjE3NTYxNDM4NTMsImV4cCI6MjA3MTUwMzg1M30.HJUkHuBsiRS2KDX7jYvpNnUnTFQQTfld96ziEd3u9Wo"
     },
     {
         id: '3',
-        title: "Hola Beats",
+        title: "Angular es el futuro de la programación",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/hola%20mundo/cover_holabeats.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9ob2xhIG11bmRvL2NvdmVyX2hvbGFiZWF0cy5wbmciLCJpYXQiOjE3NTYxMzc4ODAsImV4cCI6MjA3MTQ5Nzg4MH0.AxJA99lu__6AYNxSRpVlIMsJbz0euSxtLmFw8Vr25V0"
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/gentleman/cover_gentleman.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9nZW50bGVtYW4vY292ZXJfZ2VudGxlbWFuLnBuZyIsImlhdCI6MTc1NjE0MzgwMSwiZXhwIjoyMDcxNTAzODAxfQ.4GSAiGWTSjQv27aiXpfCIAF33gRkmE0xysAlJLERqcE"
     },
     {
         id: '4',
-        title: "Sindrome del impostor",
+        title: "La programación es el futuro",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/gentleman/cover_gentleman.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9nZW50bGVtYW4vY292ZXJfZ2VudGxlbWFuLmpwZyIsImlhdCI6MTc1NjEzNzkxMiwiZXhwIjoyMDcxNDk3OTEyfQ.OP2AVUfIJ4ZjyPV3VtrQsOjoQMjI1DkVNQaV-uQpwcQ"
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/midudev/cover_midudev.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9taWR1ZGV2L2NvdmVyX21pZHVkZXYucG5nIiwiaWF0IjoxNzU2MTQzODgyLCJleHAiOjIwNzE1MDM4ODJ9.O8-vdxau4gX63D9c5A2rXCdLB6jfJqFQIKDFxquruvA"
     }
 ]
 
@@ -117,6 +112,33 @@ export interface Song {
   album: string;
   duration: string;
 }
+
+export const contentCommunity: Playlist[] = [
+    {
+        id:'1',
+        title:'Joyas ocultas y canciones que no conocías',
+        cover:'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/dw/cover/es'
+    },
+    {
+        id:'2',
+        title:'Hola Beats, la playlist perfecta para programar',
+        cover:'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/1/ab6761610000e5eb144f9e6f1362a58e63b686f4/es'
+    },{
+        id:'3',
+        title:'Programación, Javascript y Desarollo Web',
+        cover:'https://i.scdn.co/image/ab67656300005f1f50d78012026bedc5896e7675'
+    },
+    {
+        id:'4',
+        title:'Coding Music | La mejor playlist para programar',
+        cover:'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84dd9263b1bb311de5c0221957'
+    },
+    {
+        id:'5',
+        title:'Impact of Javascript in the last decade',
+        cover:'https://i.scdn.co/image/ab67656300005f1f4c27b6c974f6b935046c74c9'
+    }
+]
 
 export const songs: Song[] = [
   {
