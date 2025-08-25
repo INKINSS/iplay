@@ -1,0 +1,21 @@
+---
+import HearthIcon from '../../icons/Hearth.astro'
+import PickIcon from '../../icons/Pick.astro'
+---
+
+<div class="flex flex-col mt-2">
+    <a href="#" class="flex gap-2 hover:bg-zinc-800 py-4 px-2">
+        <figure class="flex justify-center items-center size-[50px] bg-gradient-to-tr from-indigo-600 to-white rounded-sm">
+            <HearthIcon />
+        </figure>
+        <div>
+            <p class="text-green-500 text-[.9rem] font-medium">Canciones que te gustan</p>
+            <div class="flex gap-2 items-center">
+                <figure class="size-[10px]">
+                    <PickIcon />
+                </figure>
+                <p class="text-[.8rem] text-zinc-400">Lista</p>
+            </div>
+        </div>
+    </a>
+</div>
