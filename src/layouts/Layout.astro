@@ -1,6 +1,7 @@
 ---
 import AsideMenu from "../components/asideMenu/AsideMenu.astro";
 import MainHeader from "../components/mainHeader/MainHeader.astro";
+import MainContent from "../components/mainContent/MainContent";
 ---
 
 <!doctype html>
@@ -13,14 +14,16 @@ import MainHeader from "../components/mainHeader/MainHeader.astro";
 	</head>
 	<body>
         <div id="app" class="relative h-screen p-1 gap-2">
-            <header class="[grid-area:header] p-1 rounded-lg pl-5 pr-1">
+            <header class="[grid-area:header] rounded-lg pl-5 pr-1">
                 <MainHeader />
             </header>
-            <aside class="[grid-area:aside] bg-zinc-900 p-4 rounded-lg">
+            <aside class="[grid-area:aside] bg-zinc-900 py-3 px-5 rounded-lg">
                 <AsideMenu />
             </aside>
-            <main class="[grid-area:main] bg-zinc-900 flex overflow-y-auto rounded-lg">main</main>
-            <footer class="[grid-area:footer] min-h-[100px] bg-transparent">footer</footer>
+            <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg">
+                <MainContent client:visible />
+            </main>
+            <footer class="[grid-area:footer] min-h-[75px] bg-transparent">footer</footer>
         </div>
 		<slot />
 	</body>
@@ -41,7 +44,7 @@ import MainHeader from "../components/mainHeader/MainHeader.astro";
         "header header header"
         "aside main main"
         "footer footer footer";
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 420px 1fr;
         grid-template-rows: auto 1fr auto;   
     }
 </style>
