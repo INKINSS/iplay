@@ -1,0 +1,29 @@
+---
+import PlayIcon from '../../icons/Play.astro'
+import type { Playlist } from "@/lib/data";
+interface Props {
+    playlist: Playlist;
+}
+
+const { playlist } = Astro.props;
+const { id, title, color, cover, artists } = playlist;
+const artistString = artists?.join(", ");
+---
+
+<a class="playlist-item group flex relative p-2 items-center gap-5 hover:bg-zinc-800" href={`/playlist/${id}`}>
+    <picture class="size-12 relative overflow-hidden">
+      <img
+        class="object-cover w-full h-full"
+        src={cover}
+        alt={title}
+      />
+      <PlayIcon
+        class="absolute inset-0 m-auto size-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      />
+    </picture>
+    <div>
+      <p class="text-white font-bold text-[.8rem]">{title}</p>
+      <p class="text-zinc-400 text-[.8rem]">{artistString}</p>
+    </div>
+  </a>
+  
