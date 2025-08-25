@@ -1,18 +1,44 @@
 ---
 import PlusIcon from '../../icons/Plus.astro'
 import ResizeIcon from '../../icons/Resize.astro'
-import LibraryIcon from '../../icons/Library.astro'
+import SearchIcon from '../../icons/Search.astro'
+import RecentIcon from '../../icons/Recent.astro'
+import LikeSongs from './LikeSongs.astro'
+import { playlists } from '@/lib/data'
+import SideMenuCard from './SideMenuCard.astro'
 ---
 
 <nav class="flex flex-col flex-1 gap-2">
     <div class="flex justify-between">
         <div class="flex gap-2 items-center">
-            <LibraryIcon />
-            <p class="text-white font-bold">Tu Biblioteca</p>
+            <p class="text-white font-bold text-[.8rem]">Tu Biblioteca</p>
         </div>
-        <div class="flex gap-4">
-            <PlusIcon />
-            <ResizeIcon />
+        <div class="flex gap-4 items-center">
+            <figure class="flex items-center text-[.8rem] gap-2 px-4 rounded-full p-2 bg-zinc-800 text-white transition-all">
+                <PlusIcon />
+                crear
+            </figure>
+                <ResizeIcon />
         </div>
+    </div>
+    <div class="py-3">
+        <span class="text-white font-bold text-[.8rem] bg-zinc-800 px-4 py-2 rounded-full">Álbumes</span>
+    </div>
+    <div class="flex justify-between px-3">
+        <figure class="size-[18px]">
+            <SearchIcon />
+        </figure>
+        <div class="flex items-center gap-2 text-zinc-400 text-[.8rem]">
+            Recientes
+            <figure class="size-[18px]">
+                <RecentIcon />
+            </figure>
+        </div>
+    </div>
+    <LikeSongs />
+    <div>
+        {playlists.map((playlist) => (
+            <SideMenuCard playlist={playlist} />
+        ))}
     </div>
 </nav>
