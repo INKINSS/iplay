@@ -8,6 +8,7 @@
     --color-customGray: rgb(18, 18, 18);
     --color-whiteOpacity: rgba(255,255,255, .80);
     --color-whiteOpacityInactive: rgba(255,255,255, .20);
+    --color-whiteOpacityActive: rgba(255,255,255, .25);
 }
 
 @theme inline {
