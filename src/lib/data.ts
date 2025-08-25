@@ -2,69 +2,95 @@ import { colors } from "./colors";
 
 export interface Playlist {
   id: string;
-  albumId: number;
+  albumId?: number;
   title: string;
   color: (typeof colors)[keyof typeof colors];
-  cover: string;
-  artists: string[];
+  cover?: string;
+  artists?: string[];
 }
 
 export const playlists: Playlist[] = [
   {
     id: '1',
     albumId: 1,
-    title: "Chill Lo-Fi Music",
+    title: "Good Time",
     color: colors.yellow,
     cover:
-      "https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353",
-    artists: ["NoSpirit", "Casiio"],
+      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5LmpwZWciLCJpYXQiOjE3NTYxMzQ0NTQsImV4cCI6MjA3MTQ5NDQ1NH0.2gBcZJjkoPndkp-_luKHlRYTRnzWARGghjVGYjvQcc8",
+    artists: ["Owl City"],
   },
   {
     id: '2',
     albumId: 2,
-    title: "Lo-Fi Chill Session",
+    title: "Time to Pretend",
     color: colors.green,
     cover:
-      "https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187",
-    artists: ["Kupla", "Blue Fox"],
+      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/mgmt/cover_mgmt.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9tZ210L2NvdmVyX21nbXQuanBnIiwiaWF0IjoxNzU2MTM0NTgzLCJleHAiOjIwNzE0OTQ1ODN9.rLQCxcYIJ3998Qu4yrXIu9LhDr1_zYzErQW7hRj3toA",
+    artists: ["MGMT"],
   },
   {
     id: '3',
     albumId: 3,
-    title: "Study Session",
+    title: "Kids",
     color: colors.rose,
     cover:
-      "https://f4.bcbits.com/img/a1435058381_65.jpg",
-    artists: ["Tenno", "xander", "Team Astro"],
+      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/mgmt/cover_mgmt.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9tZ210L2NvdmVyX21nbXQuanBnIiwiaWF0IjoxNzU2MTM0NTgzLCJleHAiOjIwNzE0OTQ1ODN9.rLQCxcYIJ3998Qu4yrXIu9LhDr1_zYzErQW7hRj3toA",
+    artists: ["MGMT"],
   },
   {
     id: '4',
     albumId: 4,
-    title: "Blue Note Study Time",
+    title: "Ocean Eyes",
     color: colors.blue,
     cover:
-      "https://f4.bcbits.com/img/a1962013209_16.jpg",
-    artists: ["Raimu", "Yasumu"],
+      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity2.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5Mi5qcGciLCJpYXQiOjE3NTYxMzQ3MzMsImV4cCI6MjA3MTQ5NDczM30.uBscYKkgZfCgZJ6U1DqTY5ruC7f6O7bK8F_CZf8MfEc",
+    artists: ["Owl City"],
   },
-  {
-    id: '5',
-    albumId: 5,
-    title: "Chau Saura Session",
-    color: colors.purple,
-    cover:
-      "https://f4.bcbits.com/img/a2793859494_16.jpg",
-    artists: ["Chau Saura", "amies", "kyu"],
-  },
-  {
-    id: '6',
-    albumId: 6,
-    title: "Like a Necessity",
-    color: colors.orange,
-    cover:
-      "https://f4.bcbits.com/img/a0363730459_16.jpg",
-    artists: ["WFS", "Nadav Cohen"],
-  },
+//   {
+//     id: '5',
+//     albumId: 5,
+//     title: "Ocean Eyes",
+//     color: colors.purple,
+//     cover:
+//       "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity2.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5Mi5qcGciLCJpYXQiOjE3NTYxMzQ3MzMsImV4cCI6MjA3MTQ5NDczM30.uBscYKkgZfCgZJ6U1DqTY5ruC7f6O7bK8F_CZf8MfEc",
+//     artists: ["Owl City"],
+//   },
+//   {
+//     id: '6',
+//     albumId: 6,
+//     title: "Thunderstruck",
+//     color: colors.orange,
+//     cover:
+//       "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity3.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5My5qcGciLCJpYXQiOjE3NTYxMzQ4MTIsImV4cCI6MjA3MTQ5NDgxMn0.jQF1OvAzq8cYLQExU9RETLrMILZyEYCXdq8W4FFC3WI",
+//     artists: ["Owl City"],
+//   },
 ];
+
+export const favoriteHeader: Playlist[] = [
+    {
+        id: '1',
+        title: "Canciones que te gustan",
+        color: colors.yellow,
+    },
+    {
+        id: '2',
+        title: "¿El mayor desafio de un programador?",
+        color: colors.yellow,
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/midudev/cover_midudev.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9taWR1ZGV2L2NvdmVyX21pZHVkZXYuanBnIiwiaWF0IjoxNzU2MTM3ODM4LCJleHAiOjIwNzE0OTc4Mzh9.ntOyk4iV-uttegtj1E1DAkIGxnAfzHXFxWepABxgusE"
+    },
+    {
+        id: '3',
+        title: "Hola Beats",
+        color: colors.yellow,
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/hola%20mundo/cover_holabeats.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9ob2xhIG11bmRvL2NvdmVyX2hvbGFiZWF0cy5wbmciLCJpYXQiOjE3NTYxMzc4ODAsImV4cCI6MjA3MTQ5Nzg4MH0.AxJA99lu__6AYNxSRpVlIMsJbz0euSxtLmFw8Vr25V0"
+    },
+    {
+        id: '4',
+        title: "Sindrome del impostor",
+        color: colors.yellow,
+        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/gentleman/cover_gentleman.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9nZW50bGVtYW4vY292ZXJfZ2VudGxlbWFuLmpwZyIsImlhdCI6MTc1NjEzNzkxMiwiZXhwIjoyMDcxNDk3OTEyfQ.OP2AVUfIJ4ZjyPV3VtrQsOjoQMjI1DkVNQaV-uQpwcQ"
+    }
+]
 
 export const morePlaylists = playlists.map((item) => ({
   ...item,
