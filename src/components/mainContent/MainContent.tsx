@@ -4,7 +4,7 @@ import IndexContent from "./allContent/mainContent/IndexContent"
 
 const MainContent = () => {
   return (
-    <main className="py-4 px-8 w-full">
+    <main className="py-4 px-8 w-full no-scrollbar">
         <div>
         <Tabs defaultValue="todo" className="w-full">
   <TabsList className="flex gap-2 text-[.8rem]">

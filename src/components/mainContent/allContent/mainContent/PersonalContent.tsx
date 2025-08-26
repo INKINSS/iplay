@@ -9,7 +9,7 @@ const PersonalContent = () => {
         <span className="text-zinc-300 font-extralight text-xs">Hecho para</span>
         <a href="#" className="text-white font-bold text-[1.5rem] hover:underline">La comunidad del Desarrollo</a>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 overflow-x-auto no-scrollbar">
             {contentCommunity.map((playlist) => (
                 <MainCard key={playlist.id} playlist={playlist} />
             ))}
