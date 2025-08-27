@@ -1,0 +1,46 @@
+---
+import AsideMenu from "../../components/asideMenu/AsideMenu.astro";
+import MainHeader from "../../components/mainHeader/MainHeader.astro";
+import MainContent from "../../components/mainContent/MainContent";
+import MainFooter from "../../components/player/MainPlayer";
+---
+
+<section>
+    <div id="app" class="relative h-screen p-1 gap-2">
+            <header class="[grid-area:header] rounded-lg pl-5 pr-1">
+                <MainHeader />
+            </header>
+            <aside class="[grid-area:aside] bg-zinc-900 py-3 px-5 rounded-lg">
+                <AsideMenu />
+            </aside>
+            <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom">
+                <MainContent client:visible />
+            </main>
+            <footer class="[grid-area:footer] min-h-[75px] bg-transparent">
+                <MainFooter client:visible />
+            </footer>
+        </div>
+		<slot />
+	</section>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+        background-color: #000;
+	}
+    #app {
+        min-height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+        grid-template-columns: 380px 1fr;
+        grid-template-rows: auto 1fr auto;   
+    }
+</style>
+<style is:global>
+</style>
