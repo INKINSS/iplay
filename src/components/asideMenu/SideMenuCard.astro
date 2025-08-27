@@ -10,10 +10,10 @@ const { id, title, color, cover, artists } = playlist;
 const artistString = artists?.join(", ");
 ---
 
-<a class="playlist-item group flex relative p-2 items-center gap-5 hover:bg-zinc-800" href={`/playlist/${id}`}>
+<a class="playlist-item group flex relative p-2 gap-5 hover:bg-zinc-800" href={`/playlist/${id}`}>
     <picture class="size-12 relative overflow-hidden">
       <img
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-full rounded-sm"
         src={cover}
         alt={title}
       />
