@@ -9,6 +9,7 @@
     --color-whiteOpacity: rgba(255,255,255, .80);
     --color-whiteOpacityInactive: rgba(255,255,255, .20);
     --color-whiteOpacityActive: rgba(255,255,255, .25);
+    --shadow-coverAlbum: rgba(56, 56, 56, 0.55) 0px 0px 70px;
 }
 
 @layer utilities {
