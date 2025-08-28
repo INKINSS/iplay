@@ -1,7 +1,6 @@
 ---
 import AsideMenu from "../components/asideMenu/AsideMenu.astro";
 import MainHeader from "../components/mainHeader/MainHeader.astro";
-import MainContent from "../components/mainContent/MainContent";
 import MainFooter from "../components/player/MainPlayer";
 ---
 
@@ -11,7 +10,8 @@ import MainFooter from "../components/player/MainPlayer";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+        <link rel="stylesheet" href="/src/styles/global.css">
+		<title>Spotify</title>
 	</head>
 	<body>
         <div id="app" class="relative h-screen p-1 gap-2">
@@ -22,13 +22,12 @@ import MainFooter from "../components/player/MainPlayer";
                 <AsideMenu />
             </aside>
             <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom">
-                <MainContent client:visible />
+                <slot />
             </main>
             <footer class="[grid-area:footer] min-h-[75px] bg-transparent">
                 <MainFooter client:visible />
             </footer>
         </div>
-		<slot />
 	</body>
 </html>
 
