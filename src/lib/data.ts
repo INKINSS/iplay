@@ -111,6 +111,7 @@ export interface Song {
   artists: string[];
   album: string;
   duration: string;
+  yearAlbum?: string;
 }
 
 export const contentCommunity: Playlist[] = [
@@ -143,7 +144,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e028b32b139981e79f2ebe005eb`,
     "artists": ["MGMT"],
     "album": "Oracular Spectacular",
-    "duration": "4:22"
+    "duration": "4:22",
+    "yearAlbum": "2012"
   },
   {
     "id": 2,
@@ -161,7 +163,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
     "artists": ["Owl City"],
     "album": "All Thing Bright and Beautiful",
-    "duration": "3:38"
+    "duration": "3:38",
+    "yearAlbum": "2015"
   },
   {
     "id": 4,
@@ -224,7 +227,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02cf5459850259268f98b07f7a`,
     "artists": ["Owl City"],
     "album": "The Midsummer Station",
-    "duration": "3:25"
+    "duration": "3:25",
+    "yearAlbum": "2016"
   },
   {
     "id": 1,
@@ -251,7 +255,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a`,
     "artists": ["Owl City"],
     "album": "Mobile Orchestra",
-    "duration": "3:33"
+    "duration": "3:33",
+    "yearAlbum": "2016"
   },
   {
     "id": 4,
@@ -314,7 +319,8 @@ export const songs: Song[] = [
     "image": "https://i.scdn.co/image/ab67616d00001e02c805e48e45d23122e45b7751",
     "artists": ["Scott && Brendo"],
     "album": "And Away We Go",
-    "duration": "3:10"
+    "duration": "3:10",
+    "yearAlbum": "2015"
   },
   {
     "id": 1,
