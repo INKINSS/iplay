@@ -1,20 +1,12 @@
 ---
-import AsideMenu from "../components/asideMenu/AsideMenu.astro";
-import MainHeader from "../components/mainHeader/MainHeader.astro";
-import MainContent from "../components/mainContent/MainContent";
-import MainFooter from "../components/player/MainPlayer";
+import AsideMenu from "../../components/asideMenu/AsideMenu.astro";
+import MainHeader from "../../components/mainHeader/MainHeader.astro";
+import MainContent from "../../components/mainContent/MainContent";
+import MainFooter from "../../components/player/MainPlayer";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-        <div id="app" class="relative h-screen p-1 gap-2">
+<section>
+    <div id="app" class="relative h-screen p-1 gap-2">
             <header class="[grid-area:header] rounded-lg pl-5 pr-1">
                 <MainHeader />
             </header>
@@ -29,8 +21,7 @@ import MainFooter from "../components/player/MainPlayer";
             </footer>
         </div>
 		<slot />
-	</body>
-</html>
+	</section>
 
 <style>
 	html,

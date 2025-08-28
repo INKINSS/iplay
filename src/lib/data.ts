@@ -307,24 +307,24 @@ export const songs: Song[] = [
     "album": "Mobile Orchestra",
     "duration": "3:24"
   },
-//   {
-//     "id": 5,
-//     "albumId": 4,
-//     "title": "No more TypeScript for me",
-//     "image": "https://f4.bcbits.com/img/a1962013209_16.jpg",
-//     "artists": ["Tenno"],
-//     "album": "Study Session",
-//     "duration": "2:29"
-//   },
-//   {
-//     "id": 1,
-//     "albumId": 5,
-//     "title": "Moonlit Walk",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "3:49"
-//   },
+  {
+    "id": 1,
+    "albumId": 5,
+    "title": "Synthia",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c805e48e45d23122e45b7751",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:10"
+  },
+  {
+    "id": 1,
+    "albumId": 6,
+    "title": "Shivers Netrum",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c5d106258d9d3ea4d0d4b70a",
+    "artists": ["NCS"],
+    "album": "Infinity",
+    "duration": "3:19"
+  },
 //   {
 //     "id": 2,
 //     "albumId": 5,
