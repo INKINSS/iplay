@@ -11,11 +11,13 @@ import Profile from '../../assets/img/Profile.astro';
 
 <header class="flex items-center justify-between">
     <div class="flex items-center gap-6 flex-1">
-        <SpotifyIcon />
+        <a href="/">
+            <SpotifyIcon />
+        </a>
         <div class="flex items-center gap-3 flex-1">
-            <figure class="p-3 bg-zinc-800 rounded-full hover:scale-105 transition-all">
+            <a href="/" class="p-3 bg-zinc-800 rounded-full hover:scale-105 transition-all">
                 <HomeIcon />
-            </figure>
+            </a>
             <div class="flex gap-2 items-center bg-zinc-800 px-4 py-2 rounded-full w-[55%] min-w-[350px]">
                 <figure class="size-[24px]">
                     <SearchIcon />
