@@ -3,14 +3,15 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/
 interface Props {
     text: string;
     children: React.ReactNode;
+    className?: string;
 }
 
 
-const TooltipItem = ({ children, text }: Props) => {
+const TooltipItem = ({ children, text, className }: Props) => {
   return (
     <TooltipProvider>
         <Tooltip>
-            <TooltipTrigger className="cursor-pointer">{children}</TooltipTrigger>
+            <TooltipTrigger className={className}>{children}</TooltipTrigger>
             <TooltipContent sideOffset={5}>{text}</TooltipContent>
         </Tooltip>
     </TooltipProvider>
