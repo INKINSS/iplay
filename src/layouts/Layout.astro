@@ -11,6 +11,7 @@ import MainFooter from "../components/player/MainPlayer";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <link rel="stylesheet" href="/src/styles/global.css">
+        <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png" type="image/x-icon">
 		<title>Spotify</title>
 	</head>
 	<body>
@@ -22,7 +23,7 @@ import MainFooter from "../components/player/MainPlayer";
                 <AsideMenu />
             </aside>
             <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom">
-                <slot />
+                    <slot />
             </main>
             <footer class="[grid-area:footer] min-h-[75px] bg-transparent">
                 <MainFooter client:visible />
