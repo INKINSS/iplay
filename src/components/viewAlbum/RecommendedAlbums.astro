@@ -1,0 +1,23 @@
+---
+import SongCard from '../mainContent/allContent/mainContent/SongCard';
+import { getAlbums } from '@/utils/getAlbums';
+
+interface Props {
+    artist: string;
+}
+const { id } = Astro.params as { id: string };
+
+const { artist } = Astro.props;
+
+const recommendedAlbums = getAlbums().filter((album) => album.artists.join(", ") === artist && album.id !== Number(id));
+---
+
+<section class="pb-10">
+    <h2 class="text-white text-[1.5rem] font-bold pb-4">{recommendedAlbums ? `Más albumes recomendados de ${artist}` : ""}</h2>
+    <div class="flex gap-2 overflow-x-auto no-scrollbar">
+        {
+            recommendedAlbums.map((album) => (
+                <SongCard song={album} />
+            ))
+        }
+</section>
