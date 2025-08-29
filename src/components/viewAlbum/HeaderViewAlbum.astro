@@ -1,4 +1,5 @@
 ---
+import { songs } from "@/lib/data";
 interface Props {
     cover: string;
     title: string;
@@ -7,6 +8,9 @@ interface Props {
     yearAlbum?: string;
 }
 const { cover, title, artist, numberSongs, yearAlbum } = Astro.props;
+const { id } = Astro.params;
+
+const totalMinutes = songs.filter((song) => song.albumId === Number(id)).reduce((total, song) => total + Number(song.duration.split(":")[0]), 0);
 
 let fontSize = "text-[4rem]"
 if (title.length > 20) fontSize = "text-[2.7rem]";
@@ -27,6 +31,8 @@ if (title.length > 40) fontSize = "text-[2rem]";
             {yearAlbum && <span class="text-zinc-400 text-[.9rem] font-bold">{yearAlbum}</span>}
             <span>•</span>
             <span class="text-zinc-400 text-[.9rem] font-bold">{numberSongs} canciones</span>
+            <span>,</span>
+            <span class="text-zinc-400 text-[.9rem] font-bold">{totalMinutes} min</span>
         </div>
     </div>
 </header>
