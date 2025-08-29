@@ -1,0 +1,14 @@
+---
+interface Props {
+    yearAlbum: string;
+    artist: string;
+}
+
+const { yearAlbum, artist } = Astro.props;
+---
+
+<section class="flex flex-col leading-5 py-10">
+    <p class="text-zinc-400 text-[.8rem] font-bold">29 de agosto de {yearAlbum}</p>
+    <span class="text-zinc-400 text-[.7rem] font-bold">© {new Date().getFullYear()} {artist}</span>
+    <span class="text-zinc-400 text-[.7rem] font-bold">℗ {new Date().getFullYear()} {artist}</span>
+</section>

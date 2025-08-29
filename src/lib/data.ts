@@ -111,6 +111,7 @@ export interface Song {
   artists: string[];
   album: string;
   duration: string;
+  yearAlbum?: string;
 }
 
 export const contentCommunity: Playlist[] = [
@@ -143,7 +144,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e028b32b139981e79f2ebe005eb`,
     "artists": ["MGMT"],
     "album": "Oracular Spectacular",
-    "duration": "4:22"
+    "duration": "4:22",
+    "yearAlbum": "2012"
   },
   {
     "id": 2,
@@ -161,7 +163,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
     "artists": ["Owl City"],
     "album": "All Thing Bright and Beautiful",
-    "duration": "3:38"
+    "duration": "3:38",
+    "yearAlbum": "2015"
   },
   {
     "id": 4,
@@ -224,7 +227,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02cf5459850259268f98b07f7a`,
     "artists": ["Owl City"],
     "album": "The Midsummer Station",
-    "duration": "3:25"
+    "duration": "3:25",
+    "yearAlbum": "2016"
   },
   {
     "id": 1,
@@ -251,7 +255,8 @@ export const songs: Song[] = [
     "image": `https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a`,
     "artists": ["Owl City"],
     "album": "Mobile Orchestra",
-    "duration": "3:33"
+    "duration": "3:33",
+    "yearAlbum": "2016"
   },
   {
     "id": 4,
@@ -307,51 +312,55 @@ export const songs: Song[] = [
     "album": "Mobile Orchestra",
     "duration": "3:24"
   },
-//   {
-//     "id": 5,
-//     "albumId": 4,
-//     "title": "No more TypeScript for me",
-//     "image": "https://f4.bcbits.com/img/a1962013209_16.jpg",
-//     "artists": ["Tenno"],
-//     "album": "Study Session",
-//     "duration": "2:29"
-//   },
-//   {
-//     "id": 1,
-//     "albumId": 5,
-//     "title": "Moonlit Walk",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "3:49"
-//   },
-//   {
-//     "id": 2,
-//     "albumId": 5,
-//     "title": "Coffee Daze",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "1:52"
-//   },
-//   {
-//     "id": 3,
-//     "albumId": 5,
-//     "title": "Skyline Serenade",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "2:15"
-//   },
-//   {
-//     "id": 4,
-//     "albumId": 5,
-//     "title": "Urban Echoes",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "4:06"
-//   },
+  {
+    "id": 1,
+    "albumId": 5,
+    "title": "Synthia",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c805e48e45d23122e45b7751",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:10",
+    "yearAlbum": "2015"
+  },
+  {
+    "id": 1,
+    "albumId": 6,
+    "title": "Shivers Netrum",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c5d106258d9d3ea4d0d4b70a",
+    "artists": ["NCS"],
+    "album": "Infinity",
+    "duration": "3:19"
+  },
+  {
+    "id": 1,
+    "albumId": 7,
+    "title": "Weast Coast",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "3:54",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 1,
+    "albumId": 8,
+    "title": "NCS Nostalgia",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "artists": ["NCS"],
+    "album": "NCS Nostalgia",
+    "duration": "3:08",
+    "yearAlbum": "2024"
+  },
+  {
+    "id": 1,
+    "albumId": 9,
+    "title": "When You Die",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b47d309281c66820b7137f5d",
+    "artists": ["MGMT"],
+    "album": "Little Dark Age",
+    "duration": "4:06",
+    "yearAlbum": "2024"
+  },
 //   {
 //     "id": 5,
 //     "albumId": 5,

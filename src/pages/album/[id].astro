@@ -1,0 +1,30 @@
+---
+import HeaderViewAlbum from "@/components/viewAlbum/HeaderViewAlbum.astro";
+import Layout from "@/layouts/Layout.astro";
+import { songs } from "@/lib/data";
+import type { Song } from "@/lib/data";
+import ToolsViewAlbum from "@/components/viewAlbum/ToolsViewAlbum.astro";
+import ListSongsAlbum from "@/components/viewAlbum/ListSongsAlbum.astro";
+import FooterViewAlbum from "@/components/viewAlbum/FooterViewAlbum.astro";
+import RecommendedAlbums from "@/components/viewAlbum/RecommendedAlbums.astro";
+const { id } = Astro.params;
+const albumSongs = songs.filter((song: Song) => song.albumId === Number(id));
+const numberSongs = albumSongs.length;
+const yearAlbum = albumSongs[0].yearAlbum;
+---
+
+<Layout>
+    <div class="flex flex-col p-6 w-full">
+        <HeaderViewAlbum
+            cover={albumSongs[0].image}
+            title={albumSongs[0].album}
+            artist={albumSongs[0].artists.join(", ")}
+            numberSongs={numberSongs}
+            yearAlbum={yearAlbum}
+        />
+        <ToolsViewAlbum cover={albumSongs[0].image} />
+        <ListSongsAlbum songs={albumSongs} />
+        <FooterViewAlbum yearAlbum={yearAlbum || ""} artist={albumSongs[0].artists.join(", ")} />
+        <RecommendedAlbums artist={albumSongs[0].artists.join(", ")} />
+    </div>
+</Layout>

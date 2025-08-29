@@ -1,7 +1,7 @@
 ---
 import AsideMenu from "../components/asideMenu/AsideMenu.astro";
 import MainHeader from "../components/mainHeader/MainHeader.astro";
-import MainContent from "../components/mainContent/MainContent";
+import MainFooter from "../components/player/MainPlayer";
 ---
 
 <!doctype html>
@@ -10,7 +10,9 @@ import MainContent from "../components/mainContent/MainContent";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+        <link rel="stylesheet" href="/src/styles/global.css">
+        <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png" type="image/x-icon">
+		<title>Spotify</title>
 	</head>
 	<body>
         <div id="app" class="relative h-screen p-1 gap-2">
@@ -21,11 +23,12 @@ import MainContent from "../components/mainContent/MainContent";
                 <AsideMenu />
             </aside>
             <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom">
-                <MainContent client:visible />
+                    <slot />
             </main>
-            <footer class="[grid-area:footer] min-h-[75px] bg-transparent">footer</footer>
+            <footer class="[grid-area:footer] min-h-[75px] bg-transparent">
+                <MainFooter client:visible />
+            </footer>
         </div>
-		<slot />
 	</body>
 </html>
 
@@ -44,19 +47,9 @@ import MainContent from "../components/mainContent/MainContent";
         "header header header"
         "aside main main"
         "footer footer footer";
-        grid-template-columns: 420px 1fr;
+        grid-template-columns: 380px 1fr;
         grid-template-rows: auto 1fr auto;   
     }
 </style>
 <style is:global>
-    @font-face {
-        font-family: 'circularSTD';
-        src: url('/public/font/CircularSpotifyText-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-    }
-    html {
-        font-family: 'circularSTD', sans-serif;
-        letter-spacing: .05em;
-    }
 </style>

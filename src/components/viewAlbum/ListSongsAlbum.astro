@@ -1,0 +1,74 @@
+---
+import Clock from '@/icons/Clock.astro';
+import type { Song } from '@/lib/data';
+import TooltipItem from '../common/TooltipItem';
+import SaveLibrary from '@/icons/SaveLibrary.astro';
+import MoreOptionsAlbum from '@/icons/MoreOptionsAlbum.astro';
+import PlayIconAlbum from '@/icons/PlayIconAlbum.astro';
+const { songs } = Astro.props;
+---
+
+<section>
+    <div
+        class="flex mb-4 items-center justify-between pb-4 pr-13 pl-7 border-b border-zinc-700"
+    >
+        <div class="flex items-center gap-2">
+            <span class="text-zinc-400 text-[1rem]">#</span>
+            <p class="text-zinc-400 text-[1rem]">Título</p>
+        </div>
+        <div>
+            <TooltipItem client:load text="Duración">
+                <figure class="size-[18px]">
+                    <Clock />
+                </figure>
+            </TooltipItem>
+        </div>
+    </div>
+    {
+        songs.map((song: Song, index: number) => (
+            <div class="flex justify-between items-center py-2 px-4 hover:bg-zinc-400/10 transition-colors rounded-sm group">
+                <div class="flex justify-center items-center gap-6">
+                    <div class="relative flex justify-center items-center ">
+                        <TooltipItem className='cursor-pointer' client:load text={`Reproducir ${song.title} de ${song.artists}`}>
+                            <PlayIconAlbum class="absolute inset-0 size-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer" />
+                        </TooltipItem>
+                        <span class="text-zinc-400 text-[1rem] font-medium opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                            {index + 1}
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-zinc-200 text-[1rem] hover:underline hover:underline-offset-4 font-bold cursor-pointer">
+                            {song.title}
+                        </p>
+                        <p class="text-zinc-400 text-[.8rem] font-medium hover:underline hover:underline-offset-4 cursor-pointer">
+                            {song.artists.join(', ')}
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <TooltipItem
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                        client:load
+                        text="Añadir a canciones que te gustan"
+                    >
+                        <figure class="size-[18px]">
+                            <SaveLibrary />
+                        </figure>
+                    </TooltipItem>
+                    <span class="text-zinc-400 font-medium text-[.9rem]">
+                        {song.duration}
+                    </span>
+                    <TooltipItem
+                        client:load
+                        text={`Más opciones para ${song.title} de ${song.album}`}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                        <figure class="size-[18px]">
+                            <MoreOptionsAlbum />
+                        </figure>
+                    </TooltipItem>
+                </div>
+            </div>
+        ))
+    }
+</section>
