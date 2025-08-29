@@ -331,33 +331,36 @@ export const songs: Song[] = [
     "album": "Infinity",
     "duration": "3:19"
   },
-//   {
-//     "id": 2,
-//     "albumId": 5,
-//     "title": "Coffee Daze",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "1:52"
-//   },
-//   {
-//     "id": 3,
-//     "albumId": 5,
-//     "title": "Skyline Serenade",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "2:15"
-//   },
-//   {
-//     "id": 4,
-//     "albumId": 5,
-//     "title": "Urban Echoes",
-//     "image": "https://f4.bcbits.com/img/a2793859494_16.jpg",
-//     "artists": ["LoFi Dreamer"],
-//     "album": "Chill Lo-Fi Music",
-//     "duration": "4:06"
-//   },
+  {
+    "id": 1,
+    "albumId": 7,
+    "title": "Weast Coast",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "3:54",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 1,
+    "albumId": 8,
+    "title": "NCS Nostalgia",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "artists": ["NCS"],
+    "album": "NCS Nostalgia",
+    "duration": "3:08",
+    "yearAlbum": "2024"
+  },
+  {
+    "id": 1,
+    "albumId": 9,
+    "title": "When You Die",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b47d309281c66820b7137f5d",
+    "artists": ["MGMT"],
+    "album": "Little Dark Age",
+    "duration": "4:06",
+    "yearAlbum": "2024"
+  },
 //   {
 //     "id": 5,
 //     "albumId": 5,
