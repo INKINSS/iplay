@@ -12,14 +12,25 @@ import ViewSong from "@/icons/ViewSong"
 import Volumen from "@/icons/Volumen"
 import { Slider } from "../ui/slider"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
-import { useState } from "react"
+import { useRef, useEffect } from "react"
 import Pause from "@/icons/Pause"
+import { usePlayerStore } from "@/store/playerStore"
 
 const MainPlayer = () => {
 
-    const [isPlaying, setIsPlaying] = useState(false);
+    const { isPlaying, setIsPlaying } = usePlayerStore();
+    const audioRef = useRef<HTMLAudioElement>(null);
 
-    const handlePlayPause = () => {
+    useEffect(() => {
+        audioRef.current!.src='/music/01/01.mp3';
+    }, [])
+
+    const handleClick = () => {
+        if (isPlaying) {
+            audioRef.current?.pause();
+        } else {
+            audioRef.current?.play();
+        }
         setIsPlaying(!isPlaying);
     }
 
@@ -53,8 +64,9 @@ const MainPlayer = () => {
                     </TooltipContent>
                 </Tooltip>
                 <Tooltip>
-                    <TooltipTrigger className="size-8 rounded-full bg-white p-2 hover:bg-zinc-200 hover:scale-105" onClick={handlePlayPause}>
+                    <TooltipTrigger className="size-8 rounded-full bg-white p-2 hover:bg-zinc-200 hover:scale-105" onClick={handleClick}>
                         {isPlaying ? <Pause /> : <PlayBlack />}
+                        <audio ref={audioRef}/>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p>{isPlaying ? 'Pausar' : 'Reproducir'}</p>
