@@ -1,20 +1,26 @@
 ---
-import AsideMenu from "../components/asideMenu/AsideMenu.astro";
-import MainHeader from "../components/mainHeader/MainHeader.astro";
-import MainFooter from "../components/player/MainPlayer";
+import AsideMenu from '../components/asideMenu/AsideMenu.astro';
+import MainHeader from '../components/mainHeader/MainHeader.astro';
+import MainFooter from '../components/player/MainPlayer';
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-        <link rel="stylesheet" href="/src/styles/global.css">
-        <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png" type="image/x-icon">
-		<title>Spotify</title>
-	</head>
-	<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <ClientRouter />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+        <link
+            rel="shortcut icon"
+            href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png"
+            type="image/x-icon"
+        />
+        <title>Spotify</title>
+    </head>
+    <body>
         <div id="app" class="relative h-screen p-1 gap-2">
             <header class="[grid-area:header] rounded-lg pl-5 pr-1">
                 <MainHeader />
@@ -22,34 +28,39 @@ import MainFooter from "../components/player/MainPlayer";
             <aside class="[grid-area:aside] bg-zinc-900 py-3 px-5 rounded-lg">
                 <AsideMenu />
             </aside>
-            <main class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom">
-                    <slot />
+            <main
+                class="[grid-area:main] bg-gradient-to-b from-customPurple from-5% to-customGray to-70% flex overflow-y-auto rounded-lg scrollbar-custom"
+            >
+                <slot />
             </main>
             <footer class="[grid-area:footer] min-h-[75px] bg-transparent">
-                <MainFooter client:visible />
+                <MainFooter
+                    client:load
+                    transition:persist
+                    transition:name="media-player"
+                />
             </footer>
         </div>
-	</body>
+    </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
         background-color: #000;
-	}
+    }
     #app {
         min-height: 100vh;
         display: grid;
         grid-template-areas:
-        "header header header"
-        "aside main main"
-        "footer footer footer";
+            'header header header'
+            'aside main main'
+            'footer footer footer';
         grid-template-columns: 380px 1fr;
-        grid-template-rows: auto 1fr auto;   
+        grid-template-rows: auto 1fr auto;
     }
 </style>
-<style is:global>
-</style>
+<style is:global></style>
