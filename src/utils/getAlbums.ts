@@ -15,7 +15,7 @@ export const getAlbums = (): Album[] => {
     if (!albumsMap.has(song.albumId)) {
       albumsMap.set(song.albumId, {
         id: song.albumId,
-        title: song.album,
+        title: song.title,
         image: song.image,
         artists: song.artists,
       });
