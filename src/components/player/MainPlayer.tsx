@@ -18,31 +18,38 @@ import { usePlayerStore } from "@/store/playerStore"
 
 const MainPlayer = () => {
 
-    const { isPlaying, setIsPlaying } = usePlayerStore();
+    const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore();
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
-        audioRef.current!.src='/music/01/01.mp3';
-    }, [])
+        isPlaying ? audioRef.current?.play() : audioRef.current?.pause();
+    }, [isPlaying])
+
+    useEffect(() => {
+        const { song, playlist } = currentMusic;
+        if(song) {
+            const src = `/music/0${playlist.id}/01.mp3`;
+            console.log(src);
+            audioRef.current!.src = src;
+            audioRef.current?.play();
+            console.log(currentMusic)
+        }
+    }, [currentMusic])
+ 
 
     const handleClick = () => {
-        if (isPlaying) {
-            audioRef.current?.pause();
-        } else {
-            audioRef.current?.play();
-        }
         setIsPlaying(!isPlaying);
     }
 
   return (
     <section className="flex justify-between items-center h-full px-6">
         <div className="flex flex-1 items-center gap-3">
-            <figure className="size-14">
-                <img className="size-full rounded-lg" src="https://i.scdn.co/image/ab67616d00004851e08bdb8feb8cc5f86ce56bcc" alt="" />
-            </figure>
+            {currentMusic.song && <figure className="size-14">
+                <img className="size-full rounded-lg" src={currentMusic.song.image} alt={currentMusic.song.title} />
+            </figure>}
             <div className="flex flex-col leading-4">
-                <p className="text-white font-medium">En El Próximo Bing Bang</p>
-                <span className="text-zinc-400 font-light text-sm">Wuicho Kun, Orion</span>
+                <p className="text-white font-medium">{currentMusic.song?.title}</p>
+                <span className="text-zinc-400 font-light text-sm">{currentMusic.song?.artists?.join(', ')}</span>
             </div>
         </div>
         <div className="flex flex-col w-[45%] items-center gap-3">
