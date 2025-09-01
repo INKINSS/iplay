@@ -22,7 +22,7 @@ const yearAlbum = albumSongs[0].yearAlbum;
             numberSongs={numberSongs}
             yearAlbum={yearAlbum}
         />
-        <ToolsViewAlbum cover={albumSongs[0].image} id={id!} />
+        <ToolsViewAlbum cover={albumSongs[0].image} albumId={id!} />
         <ListSongsAlbum songs={albumSongs} />
         <FooterViewAlbum yearAlbum={yearAlbum || ""} artist={albumSongs[0].artists.join(", ")} />
         <RecommendedAlbums artist={albumSongs[0].artists.join(", ")} />

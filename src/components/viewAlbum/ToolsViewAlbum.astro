@@ -16,7 +16,7 @@ const { cover, albumId } = Astro.props;
 
 <section class="flex items-center justify-between py-10">
     <div class="flex items-center gap-6">
-        <StateButtonAlbum client:load albumId={albumId} />
+        <StateButtonAlbum client:visible albumId={albumId} />
     <TooltipItem client:load text="Desplázate por las canciones de este álbum">
         <figure class="cursor-pointer size-12 rounded-lg">
             <img class="border w-full border-zinc-400 rounded-lg p-[.2rem]" src={cover} alt="">
