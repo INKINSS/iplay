@@ -3,24 +3,25 @@ import ButtonPlayerAlbum from "./ButtonPlayerAlbum"
 import { usePlayerStore } from "@/store/playerStore"
 
 const StateButtonAlbum = ({ albumId }: { albumId: string | number }) => {
-    const { isPlaying, currentMusic } = usePlayerStore();
+
+    const { isPlaying, currentMusic, setIsPlaying, setCurrentMusic } = usePlayerStore();
     const currentAlbum = currentMusic?.playlist?.id === albumId;
     const currentPlaylist = isPlaying && currentAlbum;
-  
+
     const handlePlay = () => {
-      if (currentPlaylist) {
-        usePlayerStore.setState({ isPlaying: false });
-      } else {
-        usePlayerStore.setState({
-          isPlaying: true,
-          currentMusic: {
-            playlist: { id: albumId },
-            song: currentMusic?.song ?? null,
-            songs: []
-          }
-        });
-      }
+        if (currentPlaylist) {
+          setIsPlaying(false);
+          return;
+        }
+        fetch(`/api/get-info-playlist?id=${albumId}`)
+        .then(res => res.json())
+        .then(data => {
+            const { playlist, songs } = data;
+            setIsPlaying(true);
+            setCurrentMusic({songs, playlist, song: songs[0]})
+        })
     };
+      
   
     return (
       <Tooltip>
