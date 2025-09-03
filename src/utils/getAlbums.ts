@@ -6,6 +6,7 @@ export interface Album {
   title: string;
   image: string;
   artists: string[];
+  album: string;
 }
 
 export const getAlbums = (): Album[] => {
@@ -18,6 +19,7 @@ export const getAlbums = (): Album[] => {
         title: song.title,
         image: song.image,
         artists: song.artists,
+        album:song.album,
       });
     }
   });
