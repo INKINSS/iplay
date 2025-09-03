@@ -12,8 +12,8 @@ const { id } = Astro.params;
 
 const totalMinutes = songs.filter((song) => song.albumId === Number(id)).reduce((total, song) => total + Number(song.duration.split(":")[0]), 0);
 
-let fontSize = "text-[4rem]"
-if (title.length > 20) fontSize = "text-[2.7rem]";
+let fontSize = "text-[3.8rem]"
+if (title.length > 20) fontSize = "text-[2.5rem]";
 if (title.length > 40) fontSize = "text-[2rem]";
 
 ---
