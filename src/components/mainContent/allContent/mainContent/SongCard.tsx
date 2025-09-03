@@ -7,6 +7,7 @@ interface Song {
     title: string;
     image?: string;
     artists?: string[];
+    album: string;
 }
 
 
@@ -19,7 +20,6 @@ const SongCard = ({song}: {song: Song}) => {
         setCurrentMusic({
             playlist:{
             id: song.id,
-            song,
         }, song, songs: []});
     }
     
@@ -30,8 +30,8 @@ const SongCard = ({song}: {song: Song}) => {
             {currentPlaylist ? <PauseGreenSongs /> : <PlayGreenSongs />}
         </figure>
         <div className="flex flex-col">
-            <p className="text-zinc-100 text-[1rem] font-medium line-clamp-2 mt-2 leading-5">{song.title}</p>
-            <p className="text-zinc-400 text-[.8rem] line-clamp-2 mt-1">{song.artists}</p>
+            <p className="text-zinc-100 text-[1rem] font-medium line-clamp-2 mt-2 leading-5">{song.album}</p>
+            <p className="text-zinc-400 text-[.8rem] line-clamp-2 mt-1">{song.artists?.join(', ')}</p>
         </div>
     </a>
   )
