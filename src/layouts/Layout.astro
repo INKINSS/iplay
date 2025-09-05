@@ -3,6 +3,7 @@ import AsideMenu from '../components/asideMenu/AsideMenu.astro';
 import MainHeader from '../components/mainHeader/MainHeader.astro';
 import MainFooter from '../components/player/MainPlayer';
 import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -12,7 +13,6 @@ import { ClientRouter } from 'astro:transitions';
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <ClientRouter />
-        <link rel="stylesheet" href="/src/styles/global.css" />
         <link
             rel="shortcut icon"
             href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png"
