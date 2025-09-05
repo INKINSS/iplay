@@ -16,7 +16,7 @@ export const playlists: Playlist[] = [
     title: "Good Time",
     color: colors.yellow,
     cover:
-      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5LmpwZWciLCJpYXQiOjE3NTYxMzQ0NTQsImV4cCI6MjA3MTQ5NDQ1NH0.2gBcZJjkoPndkp-_luKHlRYTRnzWARGghjVGYjvQcc8",
+      "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c40bdabbf94f398b52e2b3192",
     artists: ["Owl City"],
   },
   {
@@ -25,7 +25,7 @@ export const playlists: Playlist[] = [
     title: "Time to Pretend",
     color: colors.green,
     cover:
-      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/mgmt/cover_mgmt.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9tZ210L2NvdmVyX21nbXQuanBnIiwiaWF0IjoxNzU2MTM0NTgzLCJleHAiOjIwNzE0OTQ1ODN9.rLQCxcYIJ3998Qu4yrXIu9LhDr1_zYzErQW7hRj3toA",
+      "https://i.scdn.co/image/ab67616d00001e028b32b139981e79f2ebe005eb",
     artists: ["MGMT"],
   },
   {
@@ -34,7 +34,7 @@ export const playlists: Playlist[] = [
     title: "Kids",
     color: colors.rose,
     cover:
-      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/mgmt/cover_mgmt.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9tZ210L2NvdmVyX21nbXQuanBnIiwiaWF0IjoxNzU2MTM0NTgzLCJleHAiOjIwNzE0OTQ1ODN9.rLQCxcYIJ3998Qu4yrXIu9LhDr1_zYzErQW7hRj3toA",
+      "https://i.scdn.co/image/ab67616d00001e028b32b139981e79f2ebe005eb",
     artists: ["MGMT"],
   },
   {
@@ -43,7 +43,7 @@ export const playlists: Playlist[] = [
     title: "Ocean Eyes",
     color: colors.blue,
     cover:
-      "https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/owl%20city/cover_owlcity2.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9vd2wgY2l0eS9jb3Zlcl9vd2xjaXR5Mi5qcGciLCJpYXQiOjE3NTYxMzQ3MzMsImV4cCI6MjA3MTQ5NDczM30.uBscYKkgZfCgZJ6U1DqTY5ruC7f6O7bK8F_CZf8MfEc",
+      "https://i.scdn.co/image/ab67616d00001e02785d4e702802da500fc78b32",
     artists: ["Owl City"],
   },
 //   {
@@ -69,21 +69,21 @@ export const playlists: Playlist[] = [
 export const favoriteHeader: Playlist[] = [
     {
         id: '2',
-        title: "El futuro de la programación",
+        title: "Tu desarrollo personal como persona",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/hola%20mundo/cover_holamundo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9ob2xhIG11bmRvL2NvdmVyX2hvbGFtdW5kby5wbmciLCJpYXQiOjE3NTYxNDM4NTMsImV4cCI6MjA3MTUwMzg1M30.HJUkHuBsiRS2KDX7jYvpNnUnTFQQTfld96ziEd3u9Wo"
+        cover:"https://i.scdn.co/image/ab67656300005f1ff65ba1309f89e91fcbff54c0"
     },
     {
         id: '3',
-        title: "Angular es el futuro de la programación",
+        title: "Hola Beast - la mejor playlist para programar",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/gentleman/cover_gentleman.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9nZW50bGVtYW4vY292ZXJfZ2VudGxlbWFuLnBuZyIsImlhdCI6MTc1NjE0MzgwMSwiZXhwIjoyMDcxNTAzODAxfQ.4GSAiGWTSjQv27aiXpfCIAF33gRkmE0xysAlJLERqcE"
+        cover:"https://i.scdn.co/image/ab6761610000e5eb144f9e6f1362a58e63b686f4"
     },
     {
         id: '4',
-        title: "La programación es el futuro",
+        title: "Síndrome del impostor - causas y cómo lidiar con ella",
         color: colors.yellow,
-        cover:"https://juposnjbdunvsbyzxppt.supabase.co/storage/v1/object/sign/spotify/covers/midudev/cover_midudev.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mYWI5NzRiMy0wN2ZkLTRkNDYtOGQ4Zi0zOWJjY2M4MmRhMzIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzcG90aWZ5L2NvdmVycy9taWR1ZGV2L2NvdmVyX21pZHVkZXYucG5nIiwiaWF0IjoxNzU2MTQzODgyLCJleHAiOjIwNzE1MDM4ODJ9.O8-vdxau4gX63D9c5A2rXCdLB6jfJqFQIKDFxquruvA"
+        cover:"https://i.scdn.co/image/ab6765630000ba8a50d78012026bedc5896e7675"
     }
 ]
 
