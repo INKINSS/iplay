@@ -5,7 +5,8 @@ import { usePlayerStore } from "@/store/playerStore"
 const StateButtonAlbum = ({ albumId }: { albumId: string | number }) => {
 
     const { isPlaying, currentMusic, setIsPlaying, setCurrentMusic } = usePlayerStore();
-    const currentAlbum = currentMusic?.playlist?.id === albumId;
+    const { playlist } = currentMusic;
+    const currentAlbum = playlist && playlist.id === albumId;
     const currentPlaylist = isPlaying && currentAlbum;
 
     const handlePlay = () => {
@@ -29,7 +30,7 @@ const StateButtonAlbum = ({ albumId }: { albumId: string | number }) => {
           <ButtonPlayerAlbum albumId={albumId} />
         </TooltipTrigger>
         <TooltipContent sideOffset={5}>
-          {currentPlaylist ? "Pausar" : "Reproducir"}
+          {isPlaying ? "Pausar" : "Reproducir"}
         </TooltipContent>
       </Tooltip>
     );
