@@ -160,7 +160,7 @@ export const songs: Song[] = [
     "id": 1,
     "albumId": 2,
     "title": "To The Sky",
-    "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
+    "image": `https://i.scdn.co/image/ab67616d00001e02785d4e702802da500fc78b32`,
     "artists": ["Owl City"],
     "album": "All Thing Bright and Beautiful",
     "duration": "3:38",
@@ -170,7 +170,7 @@ export const songs: Song[] = [
     "id": 2,
     "albumId": 2,
     "title": "When Can I See You Again",
-    "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
+    "image": `https://i.scdn.co/image/ab67616d00001e026fba239d8fdb3f7125e19091`,
     "artists": ["Owl City"],
     "album": "Ocean Eyes",
     "duration": "3:41"
@@ -323,6 +323,56 @@ export const songs: Song[] = [
     "yearAlbum": "2015"
   },
   {
+    "id": 2,
+    "albumId": 5,
+    "title": "One Afternoon",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "2:48",
+    "yearAlbum": "2013"
+  },
+  {
+    "id": 3,
+    "albumId": 5,
+    "title": "Kitten Air",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:21",
+    "yearAlbum": "2013"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Reverie",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:32",
+    "yearAlbum": "2015"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Northwest",
+    "image": "https://i.scdn.co/image/ab67616d00001e02a2155a620c47b8b8e500d9da",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:14",
+    "yearAlbum": "2015"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Avenue",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b3e9ea2bd8a964232e902fd2",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:10",
+    "yearAlbum": "2018"
+  },
+  {
     "id": 1,
     "albumId": 6,
     "title": "Shivers Netrum",
@@ -330,6 +380,15 @@ export const songs: Song[] = [
     "artists": ["NCS"],
     "album": "Infinity",
     "duration": "3:19"
+  },
+  {
+    "id": 2,
+    "albumId": 6,
+    "title": "Different Heaven",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c5d106258d9d3ea4d0d4b70a",
+    "artists": ["NCS"],
+    "album": "Infinity",
+    "duration": "4:27"
   },
   {
     "id": 1,
@@ -342,23 +401,53 @@ export const songs: Song[] = [
     "yearAlbum": "2023"
   },
   {
+    "id": 2,
+    "albumId": 7,
+    "title": "Deep Blue",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "3:17",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 3,
+    "albumId": 7,
+    "title": "Little Voices",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "2:21",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 4,
+    "albumId": 7,
+    "title": "Photographs",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "2:37",
+    "yearAlbum": "2023"
+  },
+  {
     "id": 1,
     "albumId": 8,
-    "title": "NCS Nostalgia",
-    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "title": "Fearless",
+    "image": "https://i.scdn.co/image/ab67616d00001e02df7c14e866cf14a259563ca1",
     "artists": ["NCS"],
     "album": "NCS Nostalgia",
     "duration": "3:08",
     "yearAlbum": "2024"
   },
   {
-    "id": 1,
-    "albumId": 9,
-    "title": "When You Die",
-    "image": "https://i.scdn.co/image/ab67616d00001e02b47d309281c66820b7137f5d",
-    "artists": ["MGMT"],
-    "album": "Little Dark Age",
-    "duration": "4:06",
+    "id": 2,
+    "albumId": 8,
+    "title": "Invincible",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "artists": ["NCS"],
+    "album": "NCS Nostalgia",
+    "duration": "3:08",
     "yearAlbum": "2024"
   },
 //   {
