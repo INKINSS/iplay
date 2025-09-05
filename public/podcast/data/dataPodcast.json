@@ -1,0 +1,58 @@
+[
+    {
+        "title": "El lenguaje de los navegadores",
+        "cover": "/podcast/covers/javascript.png",
+        "category": "Desarrollo web",
+        "date": "Hace 2 semanas",
+        "duration": "45 minutos",
+        "description": "Descubre JavaScript, el lenguaje que revolucionó el desarrollo web moderno. Desde sus humildes comienzos como un script simple hasta convertirse en la columna vertebral de aplicaciones complejas, exploraremos cómo JavaScript transformó la experiencia del usuario en la web y se expandió más allá del navegador."
+    },
+    {
+        "title": "CSS: los estilos de tus aplicaciones en el navegador",
+        "cover": "/podcast/covers/css.png",
+        "category": "Diseño web",
+        "date": "Hace 1 semana",
+        "duration": "30 minutos",
+        "description": "Sumérgete en el mundo de CSS y descubre cómo este poderoso lenguaje de estilos ha evolucionado desde simples reglas de formato hasta un sistema completo de diseño. Aprenderás sobre las últimas características como Grid, Flexbox, variables CSS y cómo estas herramientas están redefiniendo el diseño web responsive."
+    },
+    {
+        "title": "Git: el control de versiones de tus proyectos",
+        "cover": "/podcast/covers/git.png",
+        "category": "Control de versiones",
+        "date": "Hace 3 días",
+        "duration": "45 minutos",
+        "description": "Explora Git, la herramienta indispensable para todo desarrollador moderno. Desde los conceptos básicos de versionado hasta workflows avanzados de colaboración en equipos grandes, descubrirás por qué Git se convirtió en el estándar de la industria y cómo dominar sus características más poderosas para mejorar tu flujo de trabajo."
+    },
+    {
+        "title": "React: la librería de JavaScript para crear interfaces",
+        "cover": "/podcast/covers/react.png",
+        "category": "Desarrollo web",
+        "date": "Hace 1 día",
+        "duration": "30 minutos",
+        "description": "Conoce React, la librería que cambió para siempre el desarrollo de interfaces de usuario. Desde el concepto revolucionario del Virtual DOM hasta los Hooks modernos, exploraremos cómo React simplificó la creación de aplicaciones interactivas y por qué se convirtió en la opción preferida de miles de desarrolladores en todo el mundo."
+    },
+    {
+        "title": "El entorno de ejecución de JavaScript",
+        "cover": "/podcast/covers/nodejs.png",
+        "category": "Desarrollo web",
+        "date": "Hace 12 horas",
+        "duration": "45 minutos",
+        "description": "Descubre Node.js, la tecnología que liberó a JavaScript del navegador y lo llevó al servidor. Exploraremos su arquitectura basada en eventos, el ecosistema NPM más grande del mundo, y cómo esta plataforma revolucionó el desarrollo backend permitiendo a los desarrolladores usar un solo lenguaje en todo el stack tecnológico."
+    },
+    {
+        "title":"El lenguaje de los científicos y analistas de datos",
+        "cover":"/podcast/covers/python.png",
+        "category":"Desarrollo web",
+        "date":"Hace 10 horas",
+        "duration":"30 minutos",
+        "description":"Adéntrate en Python, el lenguaje que conquistó el mundo de la ciencia de datos y la inteligencia artificial. Con su sintaxis elegante y readable, Python se ha convertido en la herramienta preferida para machine learning, análisis de datos, automatización y desarrollo web. Descubre por qué gigantes tecnológicos como Google, Netflix y Instagram confían en Python."
+    },
+    {
+        "title": "Java: el lenguaje de los empresarios",
+        "cover": "/podcast/covers/java.png",
+        "category": "Desarrollo web",
+        "date": "Hace 8 horas",
+        "duration": "45 minutos",
+        "description": "Explora Java, el lenguaje que domina el mundo empresarial desde hace más de dos décadas. Con su filosofía 'write once, run anywhere', Java se estableció como la base de millones de aplicaciones corporativas. Descubre por qué sigue siendo relevante en la era moderna, desde microservicios hasta aplicaciones Android de gran escala."
+    }
+]
