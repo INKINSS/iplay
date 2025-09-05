@@ -1,5 +1,5 @@
-import Video from "@/icons/video"
 import OptionsPodcastHover from "./OptionsPodcastHover"
+import Video from '../../icons/Video'
 
 interface Props {
     title: string,
