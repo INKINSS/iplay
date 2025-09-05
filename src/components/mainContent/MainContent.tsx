@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs"
 import IndexContent from "./allContent/mainContent/IndexContent"
 import ViewMusic from "../viewMusic/ViewMusic"
+import ViewPodcast from "../podcast/ViewPodcast"
 
 
 const MainContent = () => {
@@ -15,7 +16,7 @@ const MainContent = () => {
   </TabsList>
   <TabsContent className="w-full pb-16" value="todo"><IndexContent /></TabsContent>
   <TabsContent value="music"><ViewMusic /></TabsContent>
-  <TabsContent value="podcasts">Podcasts</TabsContent>
+  <TabsContent value="podcasts"><ViewPodcast /></TabsContent>
 </Tabs>
         </div>
     </main>
