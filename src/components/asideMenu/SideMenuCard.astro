@@ -1,17 +1,19 @@
 ---
 import PlayIcon from '../../icons/Play.astro'
 import type { Playlist } from "@/lib/data";
+
 interface Props {
     playlist: Playlist;
 }
 
 const { playlist } = Astro.props;
-const { id, title, cover, artists } = playlist;
+const { title, cover, artists } = playlist;
 const artistString = artists?.join(", ");
+
 ---
 
-<a class="playlist-item group flex relative p-2 gap-5 hover:bg-zinc-800" href={`/playlist/${id}`}>
-    <picture class="size-12 relative overflow-hidden">
+<button class="playlist-item group flex relative p-2 gap-5 hover:bg-zinc-800 w-full"> 
+    <picture class="size-12 relative overflow-hidden cursor-pointer">
       <img
         class="object-cover w-full h-full rounded-sm"
         src={cover}
@@ -25,5 +27,5 @@ const artistString = artists?.join(", ");
       <p class="text-white font-bold text-[.8rem]">{title}</p>
       <p class="text-zinc-400 text-[.8rem]">{artistString}</p>
     </div>
-  </a>
+  </button>
   
