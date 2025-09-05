@@ -42,8 +42,11 @@ const MainPlayer = () => {
         if (song) {
             const trackNumber = String(playlist.song + 1).padStart(2, "0");
             const src = `/music/0${playlist.id}/${trackNumber}.mp3`;
-            audioRef.current!.src = src;
-            audioRef.current?.play();
+            const audio = audioRef.current;
+            if (audio) {
+                audio.src = src;
+                audio.play();
+            }
         }
     }, [currentMusic]);
     
