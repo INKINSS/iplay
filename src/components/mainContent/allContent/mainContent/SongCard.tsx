@@ -13,14 +13,16 @@ interface Song {
 
 const SongCard = ({song}: {song: Song}) => {
     
-    const { isPlaying, currentMusic, setCurrentMusic } = usePlayerStore(state => state);
+    const { isPlaying, currentMusic, setCurrentMusic, setIsPlaying } = usePlayerStore(state => state);
     const currentPlaylist = isPlaying && currentMusic?.song?.id === song.id;
 
     const handleClick = () => {
         setCurrentMusic({
             playlist:{
             id: song.id,
+            song:0,
         }, song, songs: []});
+        setIsPlaying(true);
     }
     
   return (
