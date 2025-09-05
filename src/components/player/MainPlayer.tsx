@@ -10,28 +10,81 @@ import Random from "@/icons/Random"
 import RepeatSong from "@/icons/RepeatSong"
 import ViewSong from "@/icons/ViewSong"
 import Volumen from "@/icons/Volumen"
-import { Slider } from "../ui/slider"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
-import { useState } from "react"
+import { useRef, useEffect, useState } from "react"
 import Pause from "@/icons/Pause"
+import { usePlayerStore } from "@/store/playerStore"
+import SliderMusic from "./SliderMusic"
+import SliderVolumen from "./SliderVolumen"
+import Mute from "@/icons/Mute"
 
 const MainPlayer = () => {
 
-    const [isPlaying, setIsPlaying] = useState(false);
+    const { isPlaying, setIsPlaying, currentMusic } = usePlayerStore();
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [volume, setVolume] = useState(1);
+    const [muted, setMuted] = useState(false);
 
-    const handlePlayPause = () => {
+    useEffect(() => {
+        audioRef.current?.addEventListener('timeupdate', () => {
+            setCurrentTime(Math.floor(audioRef.current!.currentTime));
+        });
+    }, []);
+
+    useEffect(() => {
+        isPlaying ? audioRef.current?.play() : audioRef.current?.pause();
+    }, [isPlaying])
+
+    useEffect(() => {
+        const { song, playlist } = currentMusic;
+        if (song) {
+            const trackNumber = String(playlist.song + 1).padStart(2, "0");
+            const src = `/music/0${playlist.id}/${trackNumber}.mp3`;
+            const audio = audioRef.current;
+            if (audio) {
+                audio.src = src;
+                audio.play();
+            }
+        }
+    }, [currentMusic]);
+    
+ 
+
+    const handleClick = () => {
         setIsPlaying(!isPlaying);
     }
 
+    const handleSliderChange = (value: number) => {
+        if (audioRef.current) {
+          audioRef.current.currentTime = value
+          setCurrentTime(value)
+        }
+      }
+
+      const handleVolumeChange = (values: number[]) => {
+        if(audioRef.current){
+            audioRef.current.volume = values[0];
+            setVolume(values[0]);
+        }
+      }
+
+      const handleMute = () => {
+        if(audioRef.current){
+            audioRef.current.muted = !muted;
+            setMuted(!muted);
+        }
+      }
   return (
     <section className="flex justify-between items-center h-full px-6">
         <div className="flex flex-1 items-center gap-3">
-            <figure className="size-14">
-                <img className="size-full rounded-lg" src="https://i.scdn.co/image/ab67616d00004851e08bdb8feb8cc5f86ce56bcc" alt="" />
-            </figure>
+            {currentMusic.song && <figure className="size-14">
+                <img className="size-full rounded-lg" src={currentMusic.song.image} alt={currentMusic.song.title} />
+            </figure>}
             <div className="flex flex-col leading-4">
-                <p className="text-white font-medium">En El Próximo Bing Bang</p>
-                <span className="text-zinc-400 font-light text-sm">Wuicho Kun, Orion</span>
+                <p className="text-white font-medium hover:underline cursor-pointer">{currentMusic.song?.title}</p>
+                <span className="text-zinc-400 font-light text-sm hover:underline cursor-pointer">{currentMusic.song?.artists?.join(', ')}</span>
             </div>
         </div>
         <div className="flex flex-col w-[45%] items-center gap-3">
@@ -53,8 +106,10 @@ const MainPlayer = () => {
                     </TooltipContent>
                 </Tooltip>
                 <Tooltip>
-                    <TooltipTrigger className="size-8 rounded-full bg-white p-2 hover:bg-zinc-200 hover:scale-105" onClick={handlePlayPause}>
+                    <TooltipTrigger className="size-8 rounded-full bg-white p-2 hover:bg-zinc-200 hover:scale-105" onClick={handleClick}>
                         {isPlaying ? <Pause /> : <PlayBlack />}
+                        <audio ref={audioRef} onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
+        onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}/>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p>{isPlaying ? 'Pausar' : 'Reproducir'}</p>
@@ -78,7 +133,7 @@ const MainPlayer = () => {
                 </Tooltip>
             </div>
             <div className="w-full">
-                <Slider defaultValue={[10]} max={100} step={1} />
+                <SliderMusic value={currentTime} max={duration} onChange={handleSliderChange}/>
             </div>
         </div>
         <div className="flex gap-3 flex-1 justify-end">
@@ -116,14 +171,14 @@ const MainPlayer = () => {
             </Tooltip>
             <div className="flex w-[30%] gap-3">
                 <Tooltip>
-                    <TooltipTrigger className="size-4 cursor-pointer">
-                        <Volumen />
+                    <TooltipTrigger className="size-4 cursor-pointer" onClick={handleMute}>
+                        {muted ? <Mute /> : <Volumen />}
                     </TooltipTrigger>
                     <TooltipContent>
-                        <p>Silenciar</p>
+                        {muted ? <p>Activar sonido</p> : <p>Silenciar</p>}
                     </TooltipContent>
                 </Tooltip>
-                <Slider className="w-full" defaultValue={[100]} max={100} step={1} />
+                <SliderVolumen volume={volume} setVolume={handleVolumeChange} muted={muted} />
             </div>
             <Tooltip>
                 <TooltipTrigger className="size-4 cursor-pointer">

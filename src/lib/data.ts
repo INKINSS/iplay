@@ -157,26 +157,26 @@ export const songs: Song[] = [
     "duration": "5:01"
   },
   {
-    "id": 3,
+    "id": 1,
     "albumId": 2,
     "title": "To The Sky",
-    "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
+    "image": `https://i.scdn.co/image/ab67616d00001e02785d4e702802da500fc78b32`,
     "artists": ["Owl City"],
     "album": "All Thing Bright and Beautiful",
     "duration": "3:38",
     "yearAlbum": "2015"
   },
   {
-    "id": 4,
+    "id": 2,
     "albumId": 2,
     "title": "When Can I See You Again",
-    "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
+    "image": `https://i.scdn.co/image/ab67616d00001e026fba239d8fdb3f7125e19091`,
     "artists": ["Owl City"],
     "album": "Ocean Eyes",
     "duration": "3:41"
   },
   {
-    "id": 5,
+    "id": 3,
     "albumId": 2,
     "title": "Cave In",
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
@@ -185,7 +185,7 @@ export const songs: Song[] = [
     "duration": "4:02"
   },
   {
-    "id": 1,
+    "id": 4,
     "albumId": 2,
     "title": "Hello Seattle",
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
@@ -194,7 +194,7 @@ export const songs: Song[] = [
     "duration": "2:38"
   },
   {
-    "id": 2,
+    "id": 5,
     "albumId": 2,
     "title": "Meteor Shower",
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
@@ -203,7 +203,7 @@ export const songs: Song[] = [
     "duration": "2:13"
   },
   {
-    "id": 3,
+    "id": 6,
     "albumId": 2,
     "title": "On The Wing",
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
@@ -212,7 +212,7 @@ export const songs: Song[] = [
     "duration": "5:02"
   },
   {
-    "id": 4,
+    "id": 7,
     "albumId": 2,
     "title": "Vanilla Twilight",
     "image": `https://i.scdn.co/image/ab67616d00001e02ba50d85c3cc5f3061e816c0c`,
@@ -221,7 +221,7 @@ export const songs: Song[] = [
     "duration": "3:52"
   },
   {
-    "id": 5,
+    "id": 1,
     "albumId": 3,
     "title": "Good Time",
     "image": `https://i.scdn.co/image/ab67616d00001e02cf5459850259268f98b07f7a`,
@@ -231,7 +231,7 @@ export const songs: Song[] = [
     "yearAlbum": "2016"
   },
   {
-    "id": 1,
+    "id": 2,
     "albumId": 3,
     "title": "Silhouette",
     "image": `https://i.scdn.co/image/ab67616d00001e02cf5459850259268f98b07f7a`,
@@ -240,7 +240,7 @@ export const songs: Song[] = [
     "duration": "4:12"
   },
   {
-    "id": 2,
+    "id": 3,
     "albumId": 3,
     "title": "Gold",
     "image": `https://i.scdn.co/image/ab67616d00001e02cf5459850259268f98b07f7a`,
@@ -249,7 +249,7 @@ export const songs: Song[] = [
     "duration": "3:56"
   },
   {
-    "id": 3,
+    "id": 1,
     "albumId": 4,
     "title": "Verge",
     "image": `https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a`,
@@ -259,7 +259,7 @@ export const songs: Song[] = [
     "yearAlbum": "2016"
   },
   {
-    "id": 4,
+    "id": 2,
     "albumId": 4,
     "title": "I Found Love",
     "image": `https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a`,
@@ -268,7 +268,7 @@ export const songs: Song[] = [
     "duration": "3:39"
   },
   {
-    "id": 5,
+    "id": 3,
     "albumId": 4,
     "title": "ThunderStruck",
     "image": `https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a`,
@@ -277,7 +277,7 @@ export const songs: Song[] = [
     "duration": "4:07"
   },
   {
-    "id": 1,
+    "id": 4,
     "albumId": 4,
     "title": "My Everything",
     "image": "https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a",
@@ -286,7 +286,7 @@ export const songs: Song[] = [
     "duration": "3:46"
   },
   {
-    "id": 2,
+    "id": 5,
     "albumId": 4,
     "title": "Unbelievable",
     "image": "https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a",
@@ -295,7 +295,7 @@ export const songs: Song[] = [
     "duration": "3:14"
   },
   {
-    "id": 3,
+    "id": 6,
     "albumId": 4,
     "title": "You're Not Alone",
     "image": "https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a",
@@ -304,7 +304,7 @@ export const songs: Song[] = [
     "duration": "3:56"
   },
   {
-    "id": 4,
+    "id": 7,
     "albumId": 4,
     "title": "This isn't The End",
     "image": "https://i.scdn.co/image/ab67616d00001e02f82babf0861d326c7797ab9a",
@@ -323,6 +323,56 @@ export const songs: Song[] = [
     "yearAlbum": "2015"
   },
   {
+    "id": 2,
+    "albumId": 5,
+    "title": "One Afternoon",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "2:48",
+    "yearAlbum": "2013"
+  },
+  {
+    "id": 3,
+    "albumId": 5,
+    "title": "Kitten Air",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:21",
+    "yearAlbum": "2013"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Reverie",
+    "image": "https://i.scdn.co/image/ab67616d00001e026a618dbe29b32326ddd76ee4",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:32",
+    "yearAlbum": "2015"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Northwest",
+    "image": "https://i.scdn.co/image/ab67616d00001e02a2155a620c47b8b8e500d9da",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:14",
+    "yearAlbum": "2015"
+  },
+  {
+    "id": 4,
+    "albumId": 5,
+    "title": "Avenue",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b3e9ea2bd8a964232e902fd2",
+    "artists": ["Scott && Brendo"],
+    "album": "And Away We Go",
+    "duration": "3:10",
+    "yearAlbum": "2018"
+  },
+  {
     "id": 1,
     "albumId": 6,
     "title": "Shivers Netrum",
@@ -330,6 +380,15 @@ export const songs: Song[] = [
     "artists": ["NCS"],
     "album": "Infinity",
     "duration": "3:19"
+  },
+  {
+    "id": 2,
+    "albumId": 6,
+    "title": "Different Heaven",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c5d106258d9d3ea4d0d4b70a",
+    "artists": ["NCS"],
+    "album": "Infinity",
+    "duration": "4:27"
   },
   {
     "id": 1,
@@ -342,23 +401,53 @@ export const songs: Song[] = [
     "yearAlbum": "2023"
   },
   {
+    "id": 2,
+    "albumId": 7,
+    "title": "Deep Blue",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "3:17",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 3,
+    "albumId": 7,
+    "title": "Little Voices",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "2:21",
+    "yearAlbum": "2023"
+  },
+  {
+    "id": 4,
+    "albumId": 7,
+    "title": "Photographs",
+    "image": "https://i.scdn.co/image/ab67616d00001e0217777e6dfe88df0453734fd3",
+    "artists": ["Scott && Brendo"],
+    "album": "Weast Coast",
+    "duration": "2:37",
+    "yearAlbum": "2023"
+  },
+  {
     "id": 1,
     "albumId": 8,
-    "title": "NCS Nostalgia",
-    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "title": "Fearless",
+    "image": "https://i.scdn.co/image/ab67616d00001e02df7c14e866cf14a259563ca1",
     "artists": ["NCS"],
     "album": "NCS Nostalgia",
     "duration": "3:08",
     "yearAlbum": "2024"
   },
   {
-    "id": 1,
-    "albumId": 9,
-    "title": "When You Die",
-    "image": "https://i.scdn.co/image/ab67616d00001e02b47d309281c66820b7137f5d",
-    "artists": ["MGMT"],
-    "album": "Little Dark Age",
-    "duration": "4:06",
+    "id": 2,
+    "albumId": 8,
+    "title": "Invincible",
+    "image": "https://i.scdn.co/image/ab67616d00001e02b9139c33dba3c6d87a6cc4a4",
+    "artists": ["NCS"],
+    "album": "NCS Nostalgia",
+    "duration": "3:08",
     "yearAlbum": "2024"
   },
 //   {
