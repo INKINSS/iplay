@@ -3,7 +3,6 @@ import PlayGreen from "@/icons/PlayGreen";
 interface Playlist {
     id?: string;
     title?: string;
-    color?: string;
     cover?: string;
   }
 
@@ -11,7 +10,6 @@ const FavoriteCard = ({ playlist }: { playlist: Playlist }) => {
     return (
         <article
         className="text-white flex items-center max-w-[250px]"
-        style={{ backgroundColor: playlist.color }}
       >
         <div className="flex items-center gap-2 group justify-center bg-whiteOpacityInactive hover:bg-whiteOpacityActive transition-all duration-150 ease-in-out mt-6 w-full overflow-hidden pr-3 cursor-pointer rounded-sm relative">
           {playlist.cover && (
